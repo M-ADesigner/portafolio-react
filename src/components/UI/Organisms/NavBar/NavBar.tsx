@@ -4,11 +4,13 @@ import Navbar from "react-bootstrap/Navbar";
 import { useEffect, useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import "./styles.css";
-
+import logo from "../../../../assets/logo.png";
+import Loader from "../../Atoms/Loader";
 
 function NavBar() {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [showLoader, setshowLoader] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -26,13 +28,14 @@ function NavBar() {
 
   const onUpdateActiveLink = (value: string) => {
     setActiveLink(value);
+    setshowLoader(true);
   };
 
   return (
     <Navbar bg="dark" expand="md" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="/">
-          {/* <img src={logo} alt="Logo" /> */}
+          <img width={75} height={60} src={logo} alt={logo + "image"} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
@@ -48,7 +51,7 @@ function NavBar() {
             >
               Home
             </Nav.Link>
-            <Nav.Link
+            {/* <Nav.Link
               href="/skills"
               className={
                 activeLink === "skills" ? "active navbar-link" : "navbar-link"
@@ -56,7 +59,7 @@ function NavBar() {
               onClick={() => onUpdateActiveLink("skills")}
             >
               Habilidades
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link
               href="/repository"
               className={
@@ -88,6 +91,7 @@ function NavBar() {
             </HashLink>
           </span>
         </Navbar.Collapse>
+      {showLoader ? <Loader /> : ""}
       </Container>
     </Navbar>
   );

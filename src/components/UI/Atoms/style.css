@@ -1,0 +1,15 @@
+.loader-Section{
+  background-color: red !important;
+}
+.containerLoader{
+    margin-top: 150px !important;
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.sectionLoaderRotating{
+    display: grid;
+    place-items: center;
+}

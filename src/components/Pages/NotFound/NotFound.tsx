@@ -1,10 +1,22 @@
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import "./style.css";
-import jsonNotFound from "./404.json";
+import jsonNotFound from "../../UI/Templates/404.json";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 function NotFound() {
+
+  useEffect(() => {
+    return () => {
+      AOS.init();
+
+    }
+  }, [])
+  
+
   return (
-    <div className="containerNotFound">
+    <div className="containerNotFound" data-aos="fade-right">
       <div className="titleContainer">
         <h3>Ooops..</h3>
     <h1>404</h1>

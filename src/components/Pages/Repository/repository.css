@@ -4,8 +4,10 @@
     gap: 10px;
     flex-wrap: wrap;
 }
-.containerLoader{
-    max-width: 100%;
+
+.containerError{
+    display: flex;
+    place-items: center;
+    place-content: center;
     text-align: center;
-    font-size: xx-large;
 }
