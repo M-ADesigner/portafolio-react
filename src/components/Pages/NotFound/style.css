@@ -1,0 +1,9 @@
+.containerNotFound{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.containerNotFound .titleContainer{
+    text-align: center;
+    margin-top: 10%;
+}

@@ -1,0 +1,9 @@
+
+.navbar a{
+    color: lightcyan !important;
+    
+}
+.navbar a:hover{
+    color: lightslategray !important;
+    
+}

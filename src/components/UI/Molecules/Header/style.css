@@ -1,0 +1,8 @@
+#imageHeader{
+    background-position: center;
+background-repeat: no-repeat;
+position: relative;
+background-size: cover;
+height: 400px;
+width: 100%;
+}
